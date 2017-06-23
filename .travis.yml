@@ -1,0 +1,19 @@
+language: node_js
+
+# Build only master & PRs
+branches:
+  only:
+    - master
+
+# Test against these versions of Node
+nodejs:
+  - "6"
+  - "8"
+
+# Test scripts
+script:
+  - npm run test -- --coverage --no-cache --runInBand && npm run build
+
+# Upload coverage
+after_success:
+  - bash <(curl -s https://codecov.io/bash)

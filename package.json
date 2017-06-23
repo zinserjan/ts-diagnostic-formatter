@@ -1,0 +1,75 @@
+{
+  "name": "ts-diagnostic-formatter",
+  "version": "0.0.0",
+  "description": "Formatter for TypeScript Diagnostics",
+  "keywords": [
+    "TypeScript",
+    "Diagnostic",
+    "formatter"
+  ],
+  "main": "dist/index.js",
+  "typings": "dist/index.d.ts",
+  "files": [
+    "*.md",
+    "src",
+    "dist"
+  ],
+  "author": "Jan-André Zinser",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/zinserjan/ts-diagnostic-formatter"
+  },
+  "bugs": {
+    "url": "https://github.com/zinserjan/ts-diagnostic-formatter/issues"
+  },
+  "scripts": {
+    "prebuild": "rimraf dist",
+    "build": "tsc -p tsconfig.build.json",
+    "test": "jest",
+    "format": "prettier --trailing-comma es5 --print-width 120 --write '{src,test}/**/*.ts'",
+    "precommit": "lint-staged",
+    "prepublish": "npm run build"
+  },
+  "lint-staged": {
+    "{src,test}/**/*.ts": [
+      "prettier --trailing-comma es5 --print-width 120 --write",
+      "git add"
+    ]
+  },
+  "jest": {
+    "testEnvironment": "node",
+    "transform": {
+      ".(ts|tsx)": "<rootDir>/node_modules/ts-jest/preprocessor.js"
+    },
+    "testRegex": "(/__tests__/.*|\\.(test|spec))\\.(ts|tsx|js)$",
+    "moduleFileExtensions": [
+      "ts",
+      "tsx",
+      "js"
+    ],
+    "mapCoverage": true,
+    "collectCoverageFrom": [
+      "src/**/*.ts"
+    ],
+    "coveragePathIgnorePatterns": [
+      "/\\.tmp/",
+      "/node_modules/",
+      "/test/"
+    ]
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "@types/jest": "^20.0.2",
+    "@types/node": "^8.0.2",
+    "husky": "^0.14.0",
+    "jest": "^20.0.4",
+    "lint-staged": "^4.0.0",
+    "prettier": "^1.4.4",
+    "rimraf": "^2.6.1",
+    "ts-jest": "^20.0.6",
+    "typescript": "^2.3.4"
+  },
+  "peerDependencies": {
+    "typescript": "^2.3.4"
+  }
+}
