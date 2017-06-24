@@ -58,9 +58,9 @@ FormattedDiagnostic {
 exports[`codeframe formatter error-4 1`] = `
 FormattedDiagnostic {
   "file": "./test/fixture/error-4/src/entry.ts",
-  "message": "[2m 3:1  [22m'}' expected.
-  [0m [90m 2 | [39m[36mexport[39m [36mdefault[39m [36mclass[39m [33mTestImpl[39m {
-  [31m[1m>[22m[39m[90m 3 | [39m[0m
+  "message": "[2m 4:1  [22m'}' expected.
+  [0m [90m 3 | [39m[36mexport[39m [36mdefault[39m [36mclass[39m [33mTestImpl[39m {
+  [31m[1m>[22m[39m[90m 4 | [39m[0m
 
 ",
 }
@@ -109,7 +109,7 @@ FormattedDiagnostic {
 exports[`stylish formatter error-4 1`] = `
 FormattedDiagnostic {
   "file": "./test/fixture/error-4/src/entry.ts",
-  "message": "  [2m3:1[22m  [31merror[39m  '}' expected.  [2mTS1005[22m
+  "message": "  [2m4:1[22m  [31merror[39m  '}' expected.  [2mTS1005[22m
 ",
 }
 `;
@@ -153,7 +153,7 @@ FormattedDiagnostic {
 exports[`ts-loader formatter error-4 1`] = `
 FormattedDiagnostic {
   "file": "./test/fixture/error-4/src/entry.ts",
-  "message": "([36m3[39m,[36m1[39m): [31merror TS1005: '}' expected.[39m
+  "message": "([36m4[39m,[36m1[39m): [31merror TS1005: '}' expected.[39m
 ",
 }
 `;
