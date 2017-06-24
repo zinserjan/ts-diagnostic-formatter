@@ -1,0 +1,167 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`codeframe formatter error-1 1`] = `
+FormattedDiagnostic {
+  "file": "./test/fixture/error-1/src/entry.ts",
+  "message": "[2m 1:7  [22mType '\\"test\\"' is not assignable to type 'number'.
+  [0m[31m[1m>[22m[39m[90m 1 | [39m[36mconst[39m x[33m:[39m number [33m=[39m [32m\\"test\\"[39m[33m;[39m
+   [90m   | [39m     [31m[1m^[22m[39m
+   [90m 2 | [39m[0m
+
+",
+}
+`;
+
+exports[`codeframe formatter error-2 1`] = `
+FormattedDiagnostic {
+  "file": "./test/fixture/error-2/src/entry.ts",
+  "message": "[2m 1:7  [22mType '\\"test\\"' is not assignable to type 'number'.
+  [0m[31m[1m>[22m[39m[90m 1 | [39m[36mconst[39m x[33m:[39m number [33m=[39m [32m\\"test\\"[39m[33m;[39m
+   [90m   | [39m     [31m[1m^[22m[39m
+   [90m 2 | [39m[36mconst[39m y[33m:[39m number [33m=[39m [32m\\"test\\"[39m[33m;[39m[0m
+
+[2m 2:7  [22mType '\\"test\\"' is not assignable to type 'number'.
+  [0m [90m 1 | [39m[36mconst[39m x[33m:[39m number [33m=[39m [32m\\"test\\"[39m[33m;[39m
+  [31m[1m>[22m[39m[90m 2 | [39m[36mconst[39m y[33m:[39m number [33m=[39m [32m\\"test\\"[39m[33m;[39m
+   [90m   | [39m     [31m[1m^[22m[39m
+   [90m 3 | [39m[36mconst[39m z[33m:[39m number [33m=[39m [32m\\"test\\"[39m[33m;[39m[0m
+
+[2m 3:7  [22mType '\\"test\\"' is not assignable to type 'number'.
+  [0m [90m 2 | [39m[36mconst[39m y[33m:[39m number [33m=[39m [32m\\"test\\"[39m[33m;[39m
+  [31m[1m>[22m[39m[90m 3 | [39m[36mconst[39m z[33m:[39m number [33m=[39m [32m\\"test\\"[39m[33m;[39m
+   [90m   | [39m     [31m[1m^[22m[39m
+   [90m 4 | [39m[36mconst[39m a[33m:[39m number [33m=[39m [32m\\"test\\"[39m[33m;[39m[0m
+
+[2m 4:7  [22mType '\\"test\\"' is not assignable to type 'number'.
+  [0m [90m 3 | [39m[36mconst[39m z[33m:[39m number [33m=[39m [32m\\"test\\"[39m[33m;[39m
+  [31m[1m>[22m[39m[90m 4 | [39m[36mconst[39m a[33m:[39m number [33m=[39m [32m\\"test\\"[39m[33m;[39m
+   [90m   | [39m     [31m[1m^[22m[39m
+   [90m 5 | [39m[0m
+
+",
+}
+`;
+
+exports[`codeframe formatter error-3 1`] = `
+FormattedDiagnostic {
+  "file": "./test/fixture/error-3/src/entry.ts",
+  "message": "[2m 3:22  [22mClass 'TestImpl' incorrectly implements interface 'Test'.  Property 'doStuff' is missing in type 'TestImpl'.
+  [0m [90m 2 | [39m
+  [31m[1m>[22m[39m[90m 3 | [39m[36mexport[39m [36mdefault[39m [36mclass[39m [33mTestImpl[39m implements [33mTest[39m {}
+   [90m   | [39m                    [31m[1m^[22m[39m
+   [90m 4 | [39m[0m
+
+",
+}
+`;
+
+exports[`codeframe formatter error-4 1`] = `
+FormattedDiagnostic {
+  "file": "./test/fixture/error-4/src/entry.ts",
+  "message": "[2m 3:1  [22m'}' expected.
+  [0m [90m 2 | [39m[36mexport[39m [36mdefault[39m [36mclass[39m [33mTestImpl[39m {
+  [31m[1m>[22m[39m[90m 3 | [39m[0m
+
+",
+}
+`;
+
+exports[`codeframe formatter error-5 1`] = `
+FormattedDiagnostic {
+  "file": "./test/fixture/error-5/src/entry.ts",
+  "message": "[2m 3:18  [22mProperty 'test2' does not exist on type 'typeof \\"./test/fixture/error-5/src/entry.css\\"'.
+  [0m [90m 2 | [39m
+  [31m[1m>[22m[39m[90m 3 | [39m[36mconst[39m x [33m=[39m styles[33m.[39mtest2[33m;[39m
+   [90m   | [39m                [31m[1m^[22m[39m
+   [90m 4 | [39m[0m
+
+",
+}
+`;
+
+exports[`stylish formatter error-1 1`] = `
+FormattedDiagnostic {
+  "file": "./test/fixture/error-1/src/entry.ts",
+  "message": "  [2m1:7[22m  [31merror[39m  Type '\\"test\\"' is not assignable to type 'number'.  [2mTS2322[22m
+",
+}
+`;
+
+exports[`stylish formatter error-2 1`] = `
+FormattedDiagnostic {
+  "file": "./test/fixture/error-2/src/entry.ts",
+  "message": "  [2m1:7[22m  [31merror[39m  Type '\\"test\\"' is not assignable to type 'number'.  [2mTS2322[22m
+  [2m2:7[22m  [31merror[39m  Type '\\"test\\"' is not assignable to type 'number'.  [2mTS2322[22m
+  [2m3:7[22m  [31merror[39m  Type '\\"test\\"' is not assignable to type 'number'.  [2mTS2322[22m
+  [2m4:7[22m  [31merror[39m  Type '\\"test\\"' is not assignable to type 'number'.  [2mTS2322[22m
+",
+}
+`;
+
+exports[`stylish formatter error-3 1`] = `
+FormattedDiagnostic {
+  "file": "./test/fixture/error-3/src/entry.ts",
+  "message": "  [2m3:22[22m  [31merror[39m  Class 'TestImpl' incorrectly implements interface 'Test'.  Property 'doStuff' is missing in type 'TestImpl'.  [2mTS2420[22m
+",
+}
+`;
+
+exports[`stylish formatter error-4 1`] = `
+FormattedDiagnostic {
+  "file": "./test/fixture/error-4/src/entry.ts",
+  "message": "  [2m3:1[22m  [31merror[39m  '}' expected.  [2mTS1005[22m
+",
+}
+`;
+
+exports[`stylish formatter error-5 1`] = `
+FormattedDiagnostic {
+  "file": "./test/fixture/error-5/src/entry.ts",
+  "message": "  [2m3:18[22m  [31merror[39m  Property 'test2' does not exist on type 'typeof \\"./test/fixture/error-5/src/entry.css\\"'.  [2mTS2339[22m
+",
+}
+`;
+
+exports[`ts-loader formatter error-1 1`] = `
+FormattedDiagnostic {
+  "file": "./test/fixture/error-1/src/entry.ts",
+  "message": "([36m1[39m,[36m7[39m): [31merror TS2322: Type '\\"test\\"' is not assignable to type 'number'.[39m
+",
+}
+`;
+
+exports[`ts-loader formatter error-2 1`] = `
+FormattedDiagnostic {
+  "file": "./test/fixture/error-2/src/entry.ts",
+  "message": "([36m1[39m,[36m7[39m): [31merror TS2322: Type '\\"test\\"' is not assignable to type 'number'.[39m
+([36m2[39m,[36m7[39m): [31merror TS2322: Type '\\"test\\"' is not assignable to type 'number'.[39m
+([36m3[39m,[36m7[39m): [31merror TS2322: Type '\\"test\\"' is not assignable to type 'number'.[39m
+([36m4[39m,[36m7[39m): [31merror TS2322: Type '\\"test\\"' is not assignable to type 'number'.[39m
+",
+}
+`;
+
+exports[`ts-loader formatter error-3 1`] = `
+FormattedDiagnostic {
+  "file": "./test/fixture/error-3/src/entry.ts",
+  "message": "([36m3[39m,[36m22[39m): [31merror TS2420: Class 'TestImpl' incorrectly implements interface 'Test'.
+  Property 'doStuff' is missing in type 'TestImpl'.[39m
+",
+}
+`;
+
+exports[`ts-loader formatter error-4 1`] = `
+FormattedDiagnostic {
+  "file": "./test/fixture/error-4/src/entry.ts",
+  "message": "([36m3[39m,[36m1[39m): [31merror TS1005: '}' expected.[39m
+",
+}
+`;
+
+exports[`ts-loader formatter error-5 1`] = `
+FormattedDiagnostic {
+  "file": "./test/fixture/error-5/src/entry.ts",
+  "message": "([36m3[39m,[36m18[39m): [31merror TS2339: Property 'test2' does not exist on type 'typeof \\"./test/fixture/error-5/src/entry.css\\"'.[39m
+",
+}
+`;
