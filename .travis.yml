@@ -6,7 +6,7 @@ branches:
     - master
 
 # Test against these versions of Node
-nodejs:
+node_js:
   - "6"
   - "8"
 
