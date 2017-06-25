@@ -1,5 +1,5 @@
 # ts-diagnostic-formatter
-[![Build Status Linux][build-travis-badge]][build-travis] [![Build Status Windows][build-appveyor-badge]][build-appveyor]
+[![Build Status Linux][build-travis-badge]][build-travis] [![Build Status Windows][build-appveyor-badge]][build-appveyor] [![codecov][codecov-badge]][codecov]
 
 A collection of custom formatter for TypeScript Diagnostics.
 
@@ -46,4 +46,5 @@ MIT
 [build-travis]: https://travis-ci.org/zinserjan/ts-diagnostic-formatter
 [build-appveyor-badge]: https://ci.appveyor.com/api/projects/status/swjbs9vq1l9yy4v9/branch/master?svg=true
 [build-appveyor]: https://ci.appveyor.com/project/zinserjan/ts-diagnostic-formatter
-
+[codecov-badge]: https://codecov.io/gh/zinserjan/ts-diagnostic-formatter/branch/master/graph/badge.svg
+[codecov]: https://codecov.io/gh/zinserjan/ts-diagnostic-formatter
