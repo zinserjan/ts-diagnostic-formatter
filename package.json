@@ -11,6 +11,7 @@
   "typings": "dist/index.d.ts",
   "files": [
     "*.md",
+    "docs",
     "src",
     "dist"
   ],
