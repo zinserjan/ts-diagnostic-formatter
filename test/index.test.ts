@@ -20,7 +20,7 @@ formatters.forEach(formatter => {
 
         formattedDiagnostics.forEach(formatted => {
           formatted.message = formatted.message.replace(os.EOL, "\n");
-          expect(formatted).toMatchSnapshot();
+          expect({ file: formatted.file, message: formatted.message }).toMatchSnapshot();
         });
       });
     });

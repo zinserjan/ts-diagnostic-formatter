@@ -2,6 +2,7 @@ import * as path from "path";
 import * as ts from "typescript";
 import { Diagnostic, flattenDiagnosticMessageText } from "typescript";
 import normalizePath = require("normalize-path");
+import Es6Error = require("es6-error");
 
 export interface GroupedDiagnostics {
   [fileName: string]: Array<Diagnostic>;
@@ -11,12 +12,11 @@ export interface Formatter {
   (diagnostics: Array<Diagnostic>, context: string): FormattedDiagnostic;
 }
 
-export class FormattedDiagnostic {
+export class FormattedDiagnostic extends Es6Error {
   file?: string;
-  message: string;
 
   constructor(message: string, file: string) {
-    this.message = message;
+    super(message);
     this.file = file;
   }
 }
