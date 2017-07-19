@@ -69,9 +69,9 @@ Object {
 exports[`codeframe formatter error-5 1`] = `
 Object {
   "file": "./test/fixture/error-5/src/entry.ts",
-  "message": "[2m 3:18  [22mProperty 'test2' does not exist on type 'typeof \\"./test/fixture/error-5/src/entry.css\\"'.
+  "message": "[2m 3:18  [22mProperty 'xxxx' does not exist on type 'typeof \\"./test/fixture/error-5/src/entry.css\\"'.
   [0m [90m 2 | [39m
-  [31m[1m>[22m[39m[90m 3 | [39m[36mconst[39m x [33m=[39m styles[33m.[39mtest2[33m;[39m
+  [31m[1m>[22m[39m[90m 3 | [39m[36mconst[39m x [33m=[39m styles[33m.[39mxxxx[33m;[39m
    [90m   | [39m                [31m[1m^[22m[39m
    [90m 4 | [39m[0m
 
@@ -117,7 +117,7 @@ Object {
 exports[`stylish formatter error-5 1`] = `
 Object {
   "file": "./test/fixture/error-5/src/entry.ts",
-  "message": "  [2m3:18[22m  [31merror[39m  Property 'test2' does not exist on type 'typeof \\"./test/fixture/error-5/src/entry.css\\"'.  [2mTS2339[22m
+  "message": "  [2m3:18[22m  [31merror[39m  Property 'xxxx' does not exist on type 'typeof \\"./test/fixture/error-5/src/entry.css\\"'.  [2mTS2339[22m
 ",
 }
 `;
@@ -161,7 +161,7 @@ Object {
 exports[`ts-loader formatter error-5 1`] = `
 Object {
   "file": "./test/fixture/error-5/src/entry.ts",
-  "message": "([36m3[39m,[36m18[39m): [31merror TS2339: Property 'test2' does not exist on type 'typeof \\"./test/fixture/error-5/src/entry.css\\"'.[39m
+  "message": "([36m3[39m,[36m18[39m): [31merror TS2339: Property 'xxxx' does not exist on type 'typeof \\"./test/fixture/error-5/src/entry.css\\"'.[39m
 ",
 }
 `;
