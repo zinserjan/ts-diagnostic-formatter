@@ -20,18 +20,22 @@ const getSeverityColor = (severity: string) => {
 };
 
 export default (diagnostics: Array<Diagnostic>, context: string): FormattedDiagnostic => {
-  const filePath = formatFilePath(diagnostics[0].file.fileName, context);
+  const file = diagnostics[0].file != null ? diagnostics[0].file : null;
+  const filePath = file != null ? formatFilePath(file.fileName, context) : undefined;
 
   const message = `${textTable(
     diagnostics.map(diagnostic => {
       const severity = DiagnosticCategory[diagnostic.category].toLowerCase();
       const severityColor = getSeverityColor(severity);
-      const location = diagnostic.file.getLineAndCharacterOfPosition(diagnostic.start);
+      const file = diagnostic.file;
+      const location = file != null && diagnostic.start != null
+        ? file.getLineAndCharacterOfPosition(diagnostic.start)
+        : null;
 
       return [
         "",
-        location.line + 1,
-        location.character + 1,
+        (location != null && location.line + 1) || "",
+        (location != null && location.character + 1) || "",
         chalk[severityColor](severity),
         formatDiagnosticMessage(diagnostic, "", context),
         chalk.dim(`TS${diagnostic.code}`),

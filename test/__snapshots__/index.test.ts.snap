@@ -79,6 +79,27 @@ Object {
 }
 `;
 
+exports[`codeframe formatter global-error 1`] = `
+Object {
+  "file": "./test/fixture/global-error/src/entry.ts",
+  "message": "[2m 1:1  [22m'Promise' only refers to a type, but is being used as a value here.
+  [0m[31m[1m>[22m[39m[90m 1 | [39m[33mPromise[39m[33m.[39mresolve()[33m.[39mthen(() [33m=>[39m {
+   [90m 2 | [39m  console[33m.[39mlog([32m\\"promsies!\\"[39m)[33m;[39m[0m
+
+[2m 5:1  [22m'Promise' only refers to a type, but is being used as a value here.
+  [0m [90m 4 | [39m
+  [31m[1m>[22m[39m[90m 5 | [39m[33mPromise[39m[33m.[39mresolve()[33m.[39mthen(() [33m=>[39m {
+   [90m 6 | [39m  console[33m.[39mlog([32m\\"promsies!\\"[39m)[33m;[39m[0m
+
+[2m 9:1  [22m'Promise' only refers to a type, but is being used as a value here.
+  [0m [90m  8 | [39m
+  [31m[1m>[22m[39m[90m  9 | [39m[33mPromise[39m[33m.[39mresolve()[33m.[39mthen(() [33m=>[39m {
+   [90m 10 | [39m  console[33m.[39mlog([32m\\"promsies!\\"[39m)[33m;[39m[0m
+
+",
+}
+`;
+
 exports[`stylish formatter error-1 1`] = `
 Object {
   "file": "./test/fixture/error-1/src/entry.ts",
@@ -118,6 +139,16 @@ exports[`stylish formatter error-5 1`] = `
 Object {
   "file": "./test/fixture/error-5/src/entry.ts",
   "message": "  [2m3:18[22m  [31merror[39m  Property 'xxxx' does not exist on type 'typeof \\"./test/fixture/error-5/src/entry.css\\"'.  [2mTS2339[22m
+",
+}
+`;
+
+exports[`stylish formatter global-error 1`] = `
+Object {
+  "file": "./test/fixture/global-error/src/entry.ts",
+  "message": "  [2m1:1[22m  [31merror[39m  'Promise' only refers to a type, but is being used as a value here.  [2mTS2693[22m
+  [2m5:1[22m  [31merror[39m  'Promise' only refers to a type, but is being used as a value here.  [2mTS2693[22m
+  [2m9:1[22m  [31merror[39m  'Promise' only refers to a type, but is being used as a value here.  [2mTS2693[22m
 ",
 }
 `;
@@ -162,6 +193,16 @@ exports[`ts-loader formatter error-5 1`] = `
 Object {
   "file": "./test/fixture/error-5/src/entry.ts",
   "message": "([36m3[39m,[36m18[39m): [31merror TS2339: Property 'xxxx' does not exist on type 'typeof \\"./test/fixture/error-5/src/entry.css\\"'.[39m
+",
+}
+`;
+
+exports[`ts-loader formatter global-error 1`] = `
+Object {
+  "file": "./test/fixture/global-error/src/entry.ts",
+  "message": "([36m1[39m,[36m1[39m): [31merror TS2693: 'Promise' only refers to a type, but is being used as a value here.[39m
+([36m5[39m,[36m1[39m): [31merror TS2693: 'Promise' only refers to a type, but is being used as a value here.[39m
+([36m9[39m,[36m1[39m): [31merror TS2693: 'Promise' only refers to a type, but is being used as a value here.[39m
 ",
 }
 `;

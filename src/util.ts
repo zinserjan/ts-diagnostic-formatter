@@ -15,7 +15,7 @@ export interface Formatter {
 export class FormattedDiagnostic extends Es6Error {
   file?: string;
 
-  constructor(message: string, file: string) {
+  constructor(message: string, file?: string) {
     super(message);
     this.file = file;
   }
@@ -28,7 +28,7 @@ export const groupByFile = (diagnostics: Array<Diagnostic>): GroupedDiagnostics 
   const deduplicatedDiagnostics = deduplicateDiagnostics(diagnostics);
 
   return deduplicatedDiagnostics.reduce((groups: GroupedDiagnostics, diagnostic: Diagnostic) => {
-    const fileName = diagnostic.file.fileName;
+    const fileName = diagnostic.file ? diagnostic.file.fileName : "global";
     if (!groups[fileName]) {
       groups[fileName] = [];
     }
